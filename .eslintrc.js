@@ -4,7 +4,8 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	extends: 'standard-with-typescript',
+	extends: ['standard-with-typescript', 'prettier'],
+	plugins: ['prettier'],
 	overrides: [
 		{
 			env: {
@@ -20,5 +21,10 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	rules: {},
+	rules: {
+		'prettier/prettier': [
+			'error',
+			JSON.parse(require('fs').readFileSync('./.prettierrc', 'utf-8')),
+		],
+	},
 }

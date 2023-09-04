@@ -75,6 +75,28 @@ npm pkg set scripts.lint="eslint . --fix --max-warnings=0"
 pnpm lint
 ```
 
+#### 5. Add Prettier plugin to ESlint
+
+Install Prettier config and plugin for ESlint
+
+```bash
+pnpm add -D eslint-config-prettier eslint-plugin-prettier
+# yarn add -D eslint-config-prettier eslint-plugin-prettier
+# npm install -D eslint-config-prettier eslint-plugin-prettier
+```
+
+Add plugin and rule of prettier to ESlint
+
+```json
+{
+  "extends": ["prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"]
+  }
+}
+```
+
 ## Lint staged + Husky [↗](https://prettier.io/docs/en/precommit#option-1-lint-stagedhttpsgithubcomokonetlint-staged)
 
 #### 1. Set up lint-staged and husky with Prettier guideline
