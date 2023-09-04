@@ -4,12 +4,20 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"prettier": "prettier . --write --list-different"
+		"prettier": "prettier . --write --list-different",
+		"lint": "eslint . --fix --max-warnings=0"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"prettier": "3.0.3"
+		"@typescript-eslint/eslint-plugin": "^6.4.0",
+		"eslint": "^8.0.1",
+		"eslint-config-standard-with-typescript": "^39.0.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+		"eslint-plugin-promise": "^6.0.0",
+		"prettier": "3.0.3",
+		"typescript": "^5.2.2"
 	}
 }
